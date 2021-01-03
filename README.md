@@ -22,6 +22,8 @@ Modify the port /dev/ttyACM0 as needed (add a udev rule).
 Upload the arduino/zumo_ros_comm/ file to the 32u4 microcontroller.  
 
 ## Power to the raspberry pi
+![](zumo_rpi_power.jpg)
+
 I had a random set of round pin and socket connectors (larger than standard dupont) with crimp ends.  
 The socket is similar to this [molex connector on digikey](https://www.digikey.com/en/products/detail/molex/0008700001/2404811)  
 I flattened the crimp end and removed the wire insulation grips. This left me with a "mini-spade" on one end and the socket on the other. I soldered the "mini-spade" to the battery terminals at the back of the Zumo PCB. My goal was to put the "mini-spade" in the PCB hole between the battery case terminals and the PCB. If I did it again, I would first remove the solder with a sucker then try to fit my connector in and re-solder.  
@@ -29,3 +31,8 @@ I flattened the crimp end and removed the wire insulation grips. This left me wi
 I crimped the pin connector to 18 AWG wire and that went to an [adafruit 5V 3A converter](https://www.adafruit.com/product/1385?gclid=EAIaIQobChMI9ciLq8T-7QIVx0XVCh21AgkhEAQYASABEgJ8T_D_BwE) for a temporary initial solution.  
 
 The final design will have first a [boost converter to 7.5 V](https://www.pololu.com/product/2893)  that goes into the adafruit 5V 3A converter.  
+
+It is recommended to use an rpi zero w and a smaller perception sensor if possible.  
+It is still a decent ROS2 demo if you just use the IR proximity sensors on the ZUMO (not yet included in this package yet.)  
+
+
