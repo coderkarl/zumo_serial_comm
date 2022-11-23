@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            "zumo_serial = zumo_serial_comm.zumo_serial_comm:main"
+            "zumo_serial = zumo_serial_comm.zumo_serial_comm:main",
+            "zumo_microros = zumo_serial_comm.zumo_microros:main"
         ],
     },
 )
